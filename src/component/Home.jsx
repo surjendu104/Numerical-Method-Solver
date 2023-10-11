@@ -8,7 +8,6 @@ const Home = () => {
   console.log(data);
   return (
     <div className="home-container">
-      <div className="home-container-child">
       {procedures.map((i) => (
         <ProcedureCard
           key={i.procedureId}
@@ -16,8 +15,6 @@ const Home = () => {
           name={i.procedureName}
         />
       ))}
-
-      </div>
     </div>
   );
 };

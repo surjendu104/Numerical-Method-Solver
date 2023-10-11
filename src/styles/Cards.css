@@ -1,14 +1,58 @@
 .procedure-container{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    /* padding: 10px; */
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    height: max-content;
+    display: flex;
+    width: auto;
+    height: 10rem;
+    text-align: center;
+    align-items: center;
+}
+
+.procedure-card {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #a5a5a5;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex-wrap: wrap;
+}
+.procedure-card:hover {
+    flex: 1;
+    border: 1px solid #a5a5a5;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+    transform: scale(1.1); 
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+    color: white;
+}
+
+.method-container {
     width: 15rem;
     height: 10rem;
-    border-radius: 5px;
-    background-color: green;
-    color: white;
+    border-radius: 8px;
+    border: 1px solid #a5a5a5;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: black;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
     > div {
         text-align: center;
         padding: 10px;
@@ -17,17 +61,20 @@
         font-size: 1.5rem;
     }
 }
-.method-container {
+.method-container:hover {
     width: 15rem;
     height: 10rem;
-    border-radius: 5px;
-    background-color: green;
-    color: white;
+    border-radius: 8px;
+    border: 1px solid #a5a5a5;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: black;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
     > div {
         text-align: center;
         padding: 10px;

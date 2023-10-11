@@ -10,7 +10,7 @@ const Method = () => {
     const param = useParams();
     const procedureId = param.procedureId;
   return (
-    <>
+    <div className='method-card'>
     {
         procedureId == 1 ? <InterpolationSolver /> :
         procedureId == 2 ? <NumericalIntegrationSolver /> :
@@ -18,7 +18,7 @@ const Method = () => {
         procedureId == 4 ? <ODESolver /> :
                            <TranscendentalEquationSolver />
     }
-    </>
+    </div>
   )
 }
 

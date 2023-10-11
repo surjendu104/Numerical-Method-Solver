@@ -1,10 +1,39 @@
-.landing-container {
+.landing-page {
+    margin-top: 12rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.landing-container,
+.landing-about,
+.landing-contact {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+}
+
+.landing-about-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.landing-span {
+    display: list-item;
+    margin-left: 1rem;
+}
+
+/* .landing-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     background: rgb(41,55,233);
-background: linear-gradient(124deg, rgba(41,55,233,0.7624299719887955) 3%, rgba(252,70,107,1) 100%);
+    background: linear-gradient(124deg, rgba(41,55,233,0.7624299719887955) 3%, rgba(252,70,107,1) 100%);
 }
 #landing-button {
     background-color: rgb(57, 55, 55);
@@ -21,4 +50,4 @@ background: linear-gradient(124deg, rgba(41,55,233,0.7624299719887955) 3%, rgba(
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     border: none;
-}
+} */

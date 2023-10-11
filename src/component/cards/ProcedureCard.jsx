@@ -3,7 +3,7 @@ import "../../styles/Cards.css";
 
 const ProcedureCard = ({ procedureId, name }) => {
   return (
-    <div>
+    <div className="procedure-card">
       <Link to={`/procedure/${procedureId}`} className="procedure-container">
         <div>{name}</div>
       </Link>
