@@ -1,0 +1,133 @@
+[
+    {
+        "procedureId" : 1,
+        "procedureName" : "Interpolation",
+        "methods" : [
+            {
+                "methodId" : 1,
+                "methodName" : "Newton Forward Interpolation",
+                "tag" : "newtonForwardInterpolation"
+            },
+            {
+                "methodId" : 2,
+                "methodName" : "Newton Backward Interpolation",
+                "tag" : "newtonBackwardInterpolation"
+            },
+            {
+                "methodId" : 3,
+                "methodName" : "Newton Divided Defference Interpolation",
+                "tag" : "newtonsDividedDifference"
+            },
+            {
+                "methodId" : 4,
+                "methodName" : "Lagranges Interpolation",
+                "tag" : "gaussForwardInterpolation"
+            },
+            {
+                "methodId" : 5,
+                "methodName" : "Gauss Forward Interpolation",
+                "tag" : "gaussForwardInterpolation"
+            },
+            {
+                "methodId" : 6,
+                "methodName" : "Gauss Backward Interpolation",
+                "tag" : "gaussBackwardInterpolation"
+            },
+            {
+                "methodId" : 7,
+                "methodName" : "Stirling Interpolation",
+                "tag" : "stirlingInterpolation"
+            }
+        ]
+
+    },
+    {
+        "procedureId" : 2,
+        "procedureName" : "Numerical Integration",
+        "methods" : [
+            {
+                "methodId" : 1,
+                "methodName" : "Trapezoidal Rule",
+                "tag" : "trapezoidalRule"
+            },
+            {
+                "methodId" : 2,
+                "methodName" : "Simpson 1/3 Rule",
+                "tag" : "simpsonsOneThirdRule"
+            },
+            {
+                "methodId" : 3,
+                "methodName" : "Simpson 3/8 Rule",
+                "tag" : "simpsonsThreeByEightRule"
+            },
+            {
+                "methodId" : 4,
+                "methodName" : "Boole Rule",
+                "tag" : "boolesRule"
+            }
+        ]
+    },
+    {
+        "procedureId" : 3,
+        "procedureName" : "Linear Algebric Equation",
+        "methods" : [
+            {
+                "methodId" : 1,
+                "methodName" : "LU Decomposition",
+                "tag" : "lUDecomposition"
+            },
+            {
+                "methodId" : 2,
+                "methodName" : "Gauss Seidal",
+                "tag" : "gaussSeidal"
+            },
+            {
+                "methodId" : 3,
+                "methodName" : "Gauss-Jordan Method",
+                "tag" : "gaussJordan"
+            },
+            {
+                "methodId" : 4,
+                "methodName" : "Gauss Elimination",
+                "tag" : "gaussElimination"
+            }
+        ]
+    },
+    {
+        "procedureId" : 4,
+        "procedureName" : "Odinary Differential Equation",
+        "methods" : [
+            {
+                "methodId" : 1,
+                "methodName" : "Euler's Method",
+                "tag" : "eulersMethod"
+            },
+            {
+                "methodId" : 2,
+                "methodName" : "Euler's Modified Method",
+                "tag" : "eulersModifiedMethod"
+            }
+        ]
+    },
+    {
+        "procedureId" : 5,
+        "procedureName" : "Algebric and Transcendental Equation",
+        "methods" : [
+            {
+                "methodId" : 1,
+                "methodName" : "Bisection Method",
+                "tag" : "bisectionMethod"
+            },
+            {
+                "methodId" : 2,
+                "methodName" : "Regula-falsi Method",
+                "tag" : "regulaFalsiMethod"
+            },
+            {
+                "methodId" : 3,
+                "methodName" : "Newton-Ropshon Method",
+                "tag" : "newtonRaphsonMethod"
+            }
+        ]
+    }
+]

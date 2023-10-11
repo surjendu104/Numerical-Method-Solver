@@ -1,0 +1,13 @@
+.home-container {
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.home-container-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

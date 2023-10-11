@@ -1,0 +1,9 @@
+.procedure-home{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.procedure-name {
+    padding: 2rem;
+    font-size: 2rem;
+}

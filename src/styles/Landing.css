@@ -1,0 +1,24 @@
+.landing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(41,55,233);
+background: linear-gradient(124deg, rgba(41,55,233,0.7624299719887955) 3%, rgba(252,70,107,1) 100%);
+}
+#landing-button {
+    background-color: rgb(57, 55, 55);
+    color: white;
+    width: 8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    border: none;
+}
+#landing-button:hover {
+    background-color: black;
+    color: white;
+    width: 8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    border: none;
+}

@@ -1,0 +1,35 @@
+.question {
+    padding-top: .5rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+    font-size: 1rem;
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table-container-child {
+    /* width: 60%; */
+    border: 1px solid black;
+    /* display: flex; */
+    /* align-items: center; */
+    flex-direction: column;
+}
+.matrix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.matrix-input {
+    height: 1.2rem;
+    width: 2rem;
+}
+.matrix-matrix {
+    border-radius: 5px;
+    border: 1px solid black;
+}

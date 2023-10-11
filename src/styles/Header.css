@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.container__name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+
+.container__links a {
+    margin: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+.container__links a:last-child > svg {
+    vertical-align: middle; 
+}
+
+#image {
+    object-fit: cover;
+    height: 3.5rem;
+    width: 3.5rem;
+}
