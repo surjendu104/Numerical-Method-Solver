@@ -34,7 +34,6 @@ const TranscendentalEquationSolver = () => {
           data
         );
         setResult(response);
-        console.log(response);
         setDataFetching(false);
       } catch (error) {
         console.error("Error in Axios request:", error);

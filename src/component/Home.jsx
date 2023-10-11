@@ -5,7 +5,6 @@ import "../styles/Home.css";
 
 const Home = () => {
   const procedures = data;
-  console.log(data);
   return (
     <div className="home-container">
       {procedures.map((i) => (

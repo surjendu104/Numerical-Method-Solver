@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import axios from 'axios';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../assets/Procedure.json';
-import axios from 'axios';
-import Loader from './Loader';
 import { server } from '../../index.js';
-import '../../styles/ODESolver.css'
+import '../../styles/ODESolver.css';
+import Loader from './Loader';
 
 const AlgebricEquationSolver = () => {
   const params = useParams();
@@ -38,6 +38,7 @@ const AlgebricEquationSolver = () => {
       }
       matrix.push(row);
     }
+    if(methodId == 2) return {inputMatrix : matrix, allowedError : allowedError, maximumIteration: maximumIteration}
     return {inputMatrix : matrix};
   }
 
@@ -104,7 +105,7 @@ const AlgebricEquationSolver = () => {
         </div>}
         {
           methodId == 2 && (<><div>
-            <p>Upper Limit</p>
+            <p>Maximum Allowed Error</p>
             <input
               className="integration-input"
               type="text"
@@ -112,7 +113,7 @@ const AlgebricEquationSolver = () => {
             />
           </div>
           <div>
-            <p>Number of Iteration</p>
+            <p>Maximum Numner of Iteration</p>
             <input
               className="integration-input"
               type="text"
