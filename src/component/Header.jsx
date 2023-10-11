@@ -20,7 +20,7 @@ const Header = () => {
         <a href="/home">Home</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
-        <a href="https://www.github.com/surjendu104" target="_blank">
+        <a href="https://github.com/surjendu104/Numerical-Method-Solver" target="_blank">
           <BsGithub size={20} />
         </a>
       </div>
