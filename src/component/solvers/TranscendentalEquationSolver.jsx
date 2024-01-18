@@ -7,7 +7,7 @@ import { server } from '../../index.js';
 import '../../styles/TranscendentalEquationSolver.css'
 
 const TranscendentalEquationSolver = () => {
-  const params = useParams();
+  const {procedureId, methodId} = useParams();
   const [equation, setEquation] = useState('');
   const [lowerLimit, setLowerLimit] = useState(0);
   const [upperLimit, setUpperLimit] = useState(0);
@@ -15,8 +15,8 @@ const TranscendentalEquationSolver = () => {
   const [dataFetching, setDataFetching] = useState(false);
   const [result, setResult] = useState({});
 
-  const methodTag = data[params.procedureId - 1].methods[params.methodId - 1].tag;
-  const methodName = data[params.procedureId - 1].methods[params.methodId - 1].methodName;
+  const methodTag = data.find(proc => proc.procedureId == procedureId).methods.find(meth=> meth.methodId == methodId).tag;
+  const methodName = data.find(proc => proc.procedureId == procedureId).methods.find(meth=> meth.methodId == methodId).methodName;
 
   const prepareData = () => {
     return {equation : equation, lowerLimit : parseFloat(lowerLimit), upperLimit: parseFloat(upperLimit), numberOfIteration: parseInt(numberOfIteration)};
@@ -65,7 +65,7 @@ const TranscendentalEquationSolver = () => {
       {
           dataFetching ? <Loader /> : 
           (
-            result.calculatedRoot && <DisplayResult result={result} methodId={params.methodId} methodName={methodName}/>
+            result.calculatedRoot && <DisplayResult result={result} methodId={methodId} methodName={methodName}/>
           )
         }
     </div>

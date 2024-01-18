@@ -7,17 +7,15 @@ import '../../styles/ODESolver.css';
 import Loader from './Loader';
 
 const AlgebricEquationSolver = () => {
-  const params = useParams();
+  const {procedureId, methodId} = useParams();
   const [numberOfEqation, setNumberOfEquation] = useState();
   const [allowedError, setAllowedError] = useState(0);
   const [maximumIteration, setMaximumIteration] = useState(10);
   const [dataFetching, setDataFetching] = useState(false);
   const [result, setResult] = useState({});
-  const [flag, setFlag] = useState(false);
 
-  const methodTag = data[params.procedureId - 1].methods[params.methodId - 1].tag;
-  const methodName = data[params.procedureId - 1].methods[params.methodId - 1].methodName;
-  const methodId = params.methodId;
+  const methodTag = data.find(proc => proc.procedureId === procedureId).methods.find(meth=> meth.methodId === methodId).tag;
+  const methodName = data.find(proc => proc.procedureId === procedureId).methods.find(meth=> meth.methodId === methodId).methodName;
 
 
   const prepareData = () => {

@@ -8,7 +8,7 @@ import '../../styles/IntegrationSolver.css'
 import Chart from '../util/Chart';
 
 const NumericalIntegrationSolver = () => {
-  const params = useParams();
+  const {procedureId, methodId} = useParams();
   const [expression, setExpression] = useState('');
   const [lowerBound, setLowerBound] = useState(0);
   const [upperBound, setUpperBound] = useState(Number.MAX_SAFE_INTEGER);
@@ -16,8 +16,8 @@ const NumericalIntegrationSolver = () => {
   const [dataFetching, setDataFetching] = useState(false);
   const [result, setResult] = useState({});
 
-  const methodTag = data[params.procedureId - 1].methods[params.methodId - 1].tag;
-  const methodName = data[params.procedureId - 1].methods[params.methodId - 1].methodName;
+  const methodTag = data.find(proc => proc.procedureId == procedureId).methods.find(meth=> meth.methodId == methodId).tag;
+  const methodName = data.find(proc => proc.procedureId == procedureId).methods.find(meth=> meth.methodId == methodId).methodName;
 
   const prepareData = () => {
     return {expression : expression, lowerBound : lowerBound, upperBound: upperBound, partitionNumber : partitionNumber};

@@ -5,9 +5,8 @@ import MethodCard from "./cards/MethodCard";
 import '../styles/Procedure.css'
 
 const Procedure = () => {
-  const param = useParams();
-
-  const procedure = data[param.procedureId - 1];
+  const { procedureId } = useParams();
+  const procedure = data.find(proc => proc.procedureId === procedureId);
 
   return (
     <div>

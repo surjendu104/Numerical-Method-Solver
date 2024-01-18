@@ -7,15 +7,14 @@ import ODESolver from './solvers/ODESolver';
 import TranscendentalEquationSolver from './solvers/TranscendentalEquationSolver';
 
 const Method = () => {
-    const param = useParams();
-    const procedureId = param.procedureId;
+    const {procedureId} = useParams();
   return (
     <div className='method-card'>
     {
-        procedureId == 1 ? <InterpolationSolver /> :
-        procedureId == 2 ? <NumericalIntegrationSolver /> :
-        procedureId == 3 ? <AlgebricEquationSolver /> :
-        procedureId == 4 ? <ODESolver /> :
+        procedureId === "interpolation" ? <InterpolationSolver /> :
+        procedureId === "numerical-integration" ? <NumericalIntegrationSolver /> :
+        procedureId === "linear-algebric-equation" ? <AlgebricEquationSolver /> :
+        procedureId === "odinary-differential-equation" ? <ODESolver /> :
                            <TranscendentalEquationSolver />
     }
     </div>

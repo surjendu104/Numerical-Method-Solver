@@ -8,7 +8,7 @@ import '../../styles/ODESolver.css'
 import Chart from '../util/Chart';
 
 const ODESolver = () => {
-  const params = useParams();
+  const {procedureId, methodId} = useParams();
   const [equation, setEquation] = useState('');
   const [valueOfX, setValueOfX] = useState(0);
   const [valueOfY, setValueOfY] = useState(0);
@@ -17,8 +17,8 @@ const ODESolver = () => {
   const [dataFetching, setDataFetching] = useState(false);
   const [result, setResult] = useState({});
 
-  const methodTag = data[params.procedureId - 1].methods[params.methodId - 1].tag;
-  const methodName = data[params.procedureId - 1].methods[params.methodId - 1].methodName;
+  const methodTag = data.find(proc => proc.procedureId == procedureId).methods.find(meth=> meth.methodId == methodId).tag;
+  const methodName = data.find(proc => proc.procedureId == procedureId).methods.find(meth=> meth.methodId == methodId).methodName;
 
   const prepareData = () => {
     return {equation : equation, valueOfX : valueOfX, valueOfY: valueOfY, height: height, valuePoint: valuePoint};

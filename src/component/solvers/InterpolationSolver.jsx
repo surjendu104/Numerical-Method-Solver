@@ -10,13 +10,13 @@ import ResultViewer from "../util/ResultViewer";
 
 const InterpolationSolver = () => {
   const [tableData, setTableData] = useState([
-    { id: 1, point: "Row 1", value: "Row 1" },
-    { id: 2, point: "Row 2", value: "Row 2" },
+    { id: 1, point: "", value: "" },
+    { id: 2, point: "", value: "" },
   ]);
   const [valuePoint, setValuePoint] = useState(0);
   const [result, setResult] = useState({});
   const [dataFetching, setDataFetching] = useState(false);
-  const params = useParams();
+  const {procedureId, methodId} = useParams();
 
   const addRow = () => {
     const newRow = { id: tableData.length + 1, point: "", value: "" };
@@ -45,8 +45,8 @@ const InterpolationSolver = () => {
     return {points : points, values : values, valuePoint: valuePoint};
   }
 
-  const methodTag = data[params.procedureId - 1].methods[params.methodId - 1].tag;
-  const methodName = data[params.procedureId - 1].methods[params.methodId - 1].methodName;
+  const methodTag = data.find(proc => proc.procedureId == procedureId).methods.find(meth=> meth.methodId == methodId).tag;
+  const methodName = data.find(proc => proc.procedureId == procedureId).methods.find(meth=> meth.methodId == methodId).methodName;
 
   const handelSubmit = async () => {
     const isEmpty = tableData.some(
